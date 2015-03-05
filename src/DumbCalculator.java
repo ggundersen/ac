@@ -5,9 +5,7 @@ import java.util.Scanner;
 
 public class DumbCalculator {
     public static void main(String[] args) {
-        /*What is your first number? 1.1
-        What is your second number? 2.2
-        What is your third number? 5.5*/
+
         Scanner in = new Scanner(System.in);
         double first, second, third, answer;
 
