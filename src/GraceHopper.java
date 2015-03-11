@@ -32,7 +32,7 @@ public class GraceHopper {
                 "really required was a description of the data and a " +
                 "statement of the relationships between the data sets. The " +
                 "Group has since begun writing an algebra of processes, the " +
-                "background for a theory of data processing. Cearly, we " +
+                "background for a theory of data processing. Clearly, we " +
                 "must break away from the sequential and not limit the " +
                 "computers. We must state definitions and provide for " +
                 "priorities and descriptions of data. We must state " +
@@ -53,15 +53,19 @@ public class GraceHopper {
             // The current character in Grace Hopper's quote.
             char c = text.charAt(i);
             char n = text.charAt(i+1);
+            // If the characters match...
             if (c == searchChar) {
-                // If we're at the end of the search word...
+                // ...and we're at the end of the search word...
                 if (searchIdx == searchWord.length()-1) {
                     // ...and end of the word in text:
                     if (n == ' ' || n == '.' || n == '-' || n == ',') {
                         count++;
                     }
+                    // We either found a match or the prefix of a word, e.g.:
+                    // "statement" instead of "state". In either case, reset.
                     searchIdx = 0;
                     searchChar = searchWord.charAt(0);
+                // ...look for the next character.
                 } else {
                     searchIdx++;
                     searchChar = searchWord.charAt(searchIdx);
@@ -72,7 +76,6 @@ public class GraceHopper {
                 searchChar = searchWord.charAt(0);
             }
         }
-
         System.out.println("The word \"" + searchWord + "\" appears " + count + " times.");
     }
 }
