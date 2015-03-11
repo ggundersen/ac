@@ -1,26 +1,35 @@
 /**
- * Created by gwg on 3/5/15.
+ * Access Code 2.1
+ *
+ * Author  Gregory Gundersen
+ * Date    March 2015
+ *
+ * This class translates Reverse Polish notation to an infix expression and
+ * evaluates it. See: http://en.wikipedia.org/wiki/Reverse_Polish_notation.
  */
 
 import java.util.Scanner;
 
 public class RPNCalculator {
+
     public static void main(String[] args) {
-        /*int num1;
-        int num2;
-        String operator;
         Scanner in = new Scanner(System.in);
 
-        System.out.println("Please enter the first number");
-        num1 = in.nextInt();
-        System.out.println("Please enter the second number");
-        num2 = in.nextInt();
-        System.out.println("Please enter an operator");
-        operator = in.next();
+        System.out.print("Please enter the first number: ");
+        double num1 = in.nextDouble();
+        System.out.print("Please enter the second number: ");
+        double num2 = in.nextDouble();
+        System.out.print("Please enter an operator: ");
+        String operator = in.next();
 
         if (operator.equals("+")) {
             System.out.println(num1 + " " + operator + " " + num2 + " = " + (num1+num2));
-        }*/
-
+        } else if (operator.equals("-")) {
+            System.out.println(num1 + " " + operator + " " + num2 + " = " + (num1-num2));
+        } else if (operator.equals("/")) {
+            System.out.println(num1 + " " + operator + " " + num2 + " = " + (num1*num2));
+        } else if (operator.equals("*")) {
+            System.out.println(num1 + " " + operator + " " + num2 + " = " + (num1/num2));
+        }
     }
 }
