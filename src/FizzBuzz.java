@@ -12,6 +12,11 @@
 public class FizzBuzz {
 
     public static void main(String[] args) {
+        //f1();
+        f2();
+    }
+
+    public static void f1() {
         for (int i = 1; i <= 100; i++) {
             if (i % 3 == 0 && i % 5 == 0) {
                 System.out.println("FizzBuzz");
@@ -22,6 +27,22 @@ public class FizzBuzz {
             } else {
                 System.out.println(i);
             }
+        }
+    }
+
+    public static void f2() {
+        for (int i = 1; i <= 100; i++) {
+            String line = "";
+            if (i % 3 == 0) {
+                line += "Fizz";
+            }
+            if (i % 5 == 0) {
+                line += "Buzz";
+            }
+            if (line == "") {
+                line = Integer.toString(i);
+            }
+            System.out.println(line);
         }
     }
 }
