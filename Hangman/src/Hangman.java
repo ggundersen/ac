@@ -4,7 +4,7 @@ public class Hangman {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        SecretWord sw = new SecretWord("Test");
+        SecretWord sw = new SecretWord();
         Drawing dwg = new Drawing();
         int misses = 0;
 
@@ -30,6 +30,7 @@ public class Hangman {
             if (misses > 5) {
                 System.out.println("You lose!");
                 System.out.println(dwg.get(misses));
+                System.out.println("The word was: " + sw.reveal());
                 break;
             }
         }

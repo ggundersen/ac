@@ -72,6 +72,10 @@ public class SecretWord {
         return line;
     }
 
+    public String reveal() {
+        return this.word;
+    }
+
     public boolean isGuessed() {
         for (Boolean guessed : this.guessedLetters.values()) {
             if (!guessed) {
